@@ -1,8 +1,8 @@
 /*eslint-disable*/
 import React, { useEffect, useState }  from "react";
-// nodejs library to set properties for components
-import PropTypes from "prop-types";
 
+import PropTypes from "prop-types";
+import { withStyles } from '@material-ui/core/styles';
 import MaterialTable from 'material-table';
 
 import network from "utils/network.js";

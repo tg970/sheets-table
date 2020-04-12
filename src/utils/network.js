@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const get = (collection, callback, callOnErr) => {
+const get = (url, callback, callOnErr) => {
 
   let request = axios.get(url)
     .then((response) => {
