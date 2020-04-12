@@ -62,7 +62,7 @@ const config = {
         robots: "index, follow",
       }
     }),
-    new BaseHrefWebpackPlugin({ baseHref: '/' }),
+    // new BaseHrefWebpackPlugin({ baseHref: '/' }),
     // new RobotstxtPlugin({
     //   policy: [{
     //     userAgent: "*",
