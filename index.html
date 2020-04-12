@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head><base href="/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Table Example</title>
+  <meta name="description" content="Table Example"><meta name="robots" content="index, follow"><link rel="shortcut icon" href="favicon.ico"></head>
+  <body>
+    <noscript>Your browser does not support JavaScript! Please enable JavaScript to run this app or try another browser. We suggest Chrome! </noscript>
+    <div id="root"></div>
+    <script type="text/javascript">
+      var isIE = /*@cc_on!@*/false || !!document.documentMode;
+      console.log('isIE:', isIE);
+      if (isIE) {
+        var root = document.getElementById("root")
+        var div = document.createElement('div')
+        div.innerHTML = "<div style='margin-left: 32px; margin-top: 32px;'>Hi there,<br><br>Internet Explorer is not equipped with the features needed to run this application.<br><br><b>Please use one of the modern browsers below for a <u>richer, faster, and more secure</u> browsing experience:<br><br><ul><li>Google Chrome (Suggested)</a></li><li>Firefox</li><li>Opera</li></ul></b><br><i>To download and install one of these browsers visit the links below:</u><br><br><ul><li><a href='https://www.google.com/chrome/'>Download Google Chrome (Suggested)</a></li><li><a href='https://www.mozilla.org/en-US/firefox/'>Download Firefox</a></li><li><a href='https://www.opera.com/'>Download Opera</a></li></ul></i><br>Thanks for stopping by!</div>"
+        root.appendChild(div)
+      }
+      if (isIE && typeof Object.assign != 'function') {
+        Object.assign = function(target) {
+          'use strict';
+          if (target == null) {
+            throw new TypeError('Cannot convert undefined or null to object');
+          }
+          target = Object(target);
+          for (var index = 1; index < arguments.length; index++) {
+            var source = arguments[index];
+            if (source != null) {
+              for (var key in source) {
+                if (Object.prototype.hasOwnProperty.call(source, key)) {
+                  target[key] = source[key];
+                }
+              }
+            }
+          }
+          return target;
+        };
+      }
+    </script>
+  <script type="text/javascript" src="./bundle.js"></script></body>
+</html>
