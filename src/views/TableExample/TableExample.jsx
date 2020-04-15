@@ -104,7 +104,7 @@ function TableExample({...props}){
     <div
       className={classes.innerWrap}
     >
-      <MaterialTable
+      {state.loaded && <MaterialTable
         isLoading={!state.loaded}
         title="רשימת חנויות"
         columns={state.columns || []}
@@ -129,8 +129,8 @@ function TableExample({...props}){
           }
         }}
         options={{
-          pageSize: 100,
-          pageSizeOptions: [10,20,100,500],
+          pageSize: state.data.length,
+          pageSizeOptions: [10, 20, 80, 100, 200, state.data.length],
           padding: 'dense',
           headerStyle: {
             backgroundColor: "#97C7D3",
@@ -142,7 +142,7 @@ function TableExample({...props}){
             textAlign: 'right',
           },
         }}
-      />
+      />}
     </div>
   );
 }
@@ -159,6 +159,30 @@ const styles = {
     },
     "& .MuiInput-underline:after" : {
       borderBottom: '2px solid #97C7D3',
+    },
+    "@media (max-width: 475px)": {
+      "& td,th": {
+        fontSize: "12px",
+        paddingRight: "2px",
+        paddingLeft: 0,
+      },
+      "& th": {
+        paddingTop: "3px",
+        paddingBottom: "3px",
+      },
+      "& h6": {
+        fontSize: "14px",
+      },
+      "& .MuiFormControl-root": {
+        paddingLeft: 0,
+      },
+      "& .MuiInput-root": {
+        fontSize: "12px",
+      },
+      "& .MuiIcon-root": {
+        height: "0.75em",
+        width: "0.75em",
+      }
     }
   }
 }
